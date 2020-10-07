@@ -1,0 +1,47 @@
+.payment {
+  padding-top: 200px;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__title {
+    max-width: 350px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  &__desc {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  &__info {
+    width: 300px;
+    border: 5px solid rgb(240,240,240);
+    padding: 24px 25px 10px;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+  }
+  &__line {
+    border-bottom: 2px solid #D1D1D1;
+    height: 1px;
+    margin: 6px auto;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    span:first-child {
+      text-align: left;
+    }
+    span:last-child {
+      text-align: right
+    }
+  }
+  &__bottom {
+    text-align: center;
+    &-text {
+      margin-bottom: 1rem;
+    }
+  }
+}

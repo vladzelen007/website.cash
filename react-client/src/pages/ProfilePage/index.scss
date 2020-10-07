@@ -1,0 +1,182 @@
+.profile {
+  position: relative;
+  height: 100%;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0; 
+  }
+  &__logo {
+    &-img {
+      width: 150px;
+    }
+  }
+  &__menu {
+    min-width: 85px;
+    min-height: 44px;
+    position: relative;
+    &-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0;
+      border: none;
+    }
+    &-btn {
+      position: relative;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      outline: none;
+      min-width: auto;
+      margin: 0;
+      justify-content: flex-end;
+      width: 100%;
+      color: #fa9e1a;
+      font-weight: 600;
+      font-size: 1.375rem;
+      border: none;
+      background: transparent;
+    }
+    &-user {
+      font-size: 16px;
+      display: none;
+      order: -1;
+      margin-right: auto;
+      max-width: 230px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+    &-icon {
+      margin-right: 15px;
+      width: 30px;
+      height: 44px;
+      &--arrow {
+        width: 16px;
+        height: 18px;
+      }
+    }
+    &-list {
+      list-style: none;
+      display: none;
+      line-height: 60px;
+      font-size: 1.375rem;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 3px solid #e8e9ee;
+    }
+    &-item {
+      width: 100%;
+      padding: 0;
+      color: #0a0e12;
+      font-weight: 600;
+    }
+    &-link {
+      color: inherit;
+    }
+  }
+  &__content {
+  }
+}
+
+.profile__menu-wrapper.active {
+  background-color: #ffffff;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  padding: 60px 20px;
+  width: calc(50% + 100px);
+}
+
+.profile__menu-wrapper.active .profile__menu-user {
+  display: inline;
+}
+
+.profile__menu-wrapper.active .profile__menu-icon--arrow {
+  transform: rotate(180deg);
+}
+
+.profile__menu-wrapper.active .profile__menu-list {
+  display: block;
+} 
+
+
+.links {
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  &__btns {
+    a {
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+      &.telegram-btn {
+        padding: 0 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        max-width: 250px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 8px;
+        background: #00e777;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.links-btn {
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 250px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  &--green {
+    background: #00e777;
+  }
+  &--blue {
+    font-size: 1.5rem;
+    background: #0088cc;
+    svg {
+      fill: #fff;
+    }
+  }
+  &__text {
+    margin-right: 12px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  &__icon {
+    pointer-events: none;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}

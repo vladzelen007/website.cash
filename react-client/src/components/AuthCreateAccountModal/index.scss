@@ -1,0 +1,23 @@
+.hidden {
+  display: none;
+}
+
+.input-alert {
+  display: block;
+  margin-bottom: 1rem;
+  color: #dc3545;
+}
+
+.success-message {
+  line-height: 1.5;
+}
+
+.error-message {
+  line-height: 1.5;
+}
+
+.info-link {
+  display: inline-block;
+  color: #facd1a;
+  text-decoration: none;
+}

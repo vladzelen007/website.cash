@@ -1,0 +1,186 @@
+@import '../../../styles/shared.scss';
+
+.welcome {
+  padding-top: 200px;
+  background-image: url(../../../assets/img/info-bg.png);
+  background-position: 65% 0;
+  background-size: auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  @include lg {
+    background-image: url(../../../assets/img/premium-bg.png);
+    background-position: 35% 0;
+  }
+  @include xl {
+    background-image: url(../../../assets/img/premium-bg.png);
+    background-size: 1489px 795px;
+    background-position: calc(50% + 300px) 0;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+      justify-content: flex-start;
+    }
+  }
+  &__img {
+    width: 90px;
+    padding-top: 5px;
+    @include md {
+      width: 12vw;
+      margin-right: 20px;
+      padding-top: 7px;
+    }
+    @include lg {
+      width: 12vw;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    width: calc(100% - 112px);
+    text-align: left;
+    @include sm {
+      font-size: 1.5rem;
+    }
+    @include lg {
+      font-size: 3.3vw;
+      text-align: left;
+      flex-basis: 66.6666%;
+    }
+  }
+  &__advantages {
+    margin-top: 40px;
+    &-item {
+      display: flex;
+      margin-bottom: 25px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      align-items: center;
+      svg {
+        font-size: 1rem;
+        fill: #facd1a;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 60px;
+  }
+}
+
+.privilege {
+  padding-top: 155px;
+  &__wrapper {
+    background: none;
+  }
+  &__title {
+    text-align: center;
+    font-size: 2.25rem;
+    @include lg {
+      font-size: 3rem;
+    }
+  }
+  &__moto {
+    margin: 15px auto 0;
+    width: 100%;
+    padding: 4px;
+    background: linear-gradient(to bottom, #facd1a, #fa9e1a);
+    border-radius: 25px;
+    @include lg {
+      width: max-content;
+    }
+    span {
+      padding: 10px 20px;
+      font-size: 1.25rem;
+      display: block;
+      border-radius: 20px;
+      background: #0a0e12;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    counter-reset: list;
+  }
+  &__item { 
+    width: 100%;
+    position: relative;
+    @include lg {
+      width: 25%;
+      padding: 0 15px;
+    }
+    &::before {
+      position: absolute;
+      counter-increment: list;
+      content: "0" counter(list);
+      font-size: 10rem;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      top: calc(50% - 80px);  
+      left: 0;
+      line-height: 1;
+      color: #111519;
+      z-index: -1;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include lg {
+        justify-content: center;
+      }
+    }
+    &-icon {
+      width: 125px;
+      height: 150px;
+      position: relative;
+    }
+    &-text {
+      line-height: 1.5;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+  &__btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 50px 0 70px;
+  }
+}
+
+.privilege__item:first-child .privilege__item-icon {
+  &::after {
+    content: '4';
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 600;
+    position: absolute;
+    top: 34px;
+    right: -3px;
+  }
+}
+
+.privilege__item:last-child .privilege__item-icon {
+  &::after {
+    content: '24/7';
+    top: auto;
+    bottom: 38px;
+    right: 0;
+    font-size: 1.56rem;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+  }
+}

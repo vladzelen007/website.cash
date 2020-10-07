@@ -1,0 +1,131 @@
+@import '../../../styles/shared.scss';
+
+.count {
+  background-color: #000;
+  &__wrapper {
+    padding: 60px 0;
+  }
+  &__title {
+    font-size: 1.7rem;
+    @include md {
+      font-size: 3rem;
+    }
+  }
+  &__content {
+    margin: 40px auto 0 auto;
+    position: relative;
+    @include md {
+      min-width: 350px;
+      width: 40%;
+    }
+    &-input {
+      width: 100%;
+      padding: 0 50px 0 14px;
+      background: transparent;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 2px;
+      line-height: 50px;
+      white-space: nowrap;
+      outline: none;
+      -moz-appearance: textfield;
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        appearance: none;
+      }
+    }
+    &-currency {
+      position: absolute;
+      color: #454a50;
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 50px;
+      right: 20px;
+      top: 2px;
+    }
+    &-btn {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+  &__btn {
+    margin-top: 45px;
+    @include md {
+      margin: 45px auto 0 auto;
+    }
+  }
+}
+
+.profit {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  @include md {
+    margin-top: 30px;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+  &__item {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include md {
+      flex-basis: 33.333333%;
+    }
+    &:nth-child(2) {
+      margin-top: 60px;
+      @include md {
+        margin-top: 0;
+      }
+    }
+    &:last-child {
+      margin-top: 40px;
+      @include md {
+        margin-top: 0;
+      }
+    }
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 40px;
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+  &__details {
+    &-days {
+      font-weight: 900;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    &-value {
+      font-weight: 900;
+      font-size: 2.15rem;
+      line-height: 3.75rem;
+      white-space: nowrap;
+    }
+  }
+  &__divider {
+    width: 65px;
+    height: 3px;
+    border: none;
+    background-color: #2b313e;
+    margin: 9px 0 0;
+  }
+}
+
+.profit__item:first-child img {
+  width: 33.3333%;
+}
+
+.profit__item:nth-child(2) img {
+  width: 60%;
+}
+
+.profit__item:last-child img {
+  width: calc(100% + 30px)
+}

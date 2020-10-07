@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/sendmail",
+      "handler": "register.create",
+      "config": {
+        "policies": [
+
+        ]
+      }
+    }
+  ]
+}

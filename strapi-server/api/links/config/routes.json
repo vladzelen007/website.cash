@@ -1,0 +1,13 @@
+{
+  "routes":[
+    {
+      "method":"GET",
+      "path": "/links",
+      "handler":"Links.find",
+      "config":{
+          "policies":[
+          ]
+      }
+    }
+  ]
+}

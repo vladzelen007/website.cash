@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="18" viewBox="0 0 24 18">
+  <defs>
+    <linearGradient id="linear-gradient">
+        <stop offset="0%" stop-color="#facd1a"></stop>
+        <stop offset="40%" stop-color="#fa9e1a"></stop>
+        <stop offset="100%" stop-color="#facd1a"></stop>
+    </linearGradient> 
+  </defs>
+  <use xlink:href="#check" fill="url(#linear-gradient)">
+    <g id="check">
+        <path d="m544.015 397.6-10.815 10.81-3.6 3.6-3.6-3.6-6.008-6.007 3.605-3.605 6.007 6.008 10.813-10.813z" transform="translate(-520 -394)"></path>
+    </g>
+  </use>
+</svg>

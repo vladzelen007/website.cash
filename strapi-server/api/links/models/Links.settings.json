@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "links",
+  "info": {
+    "name": "links"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "whatsapp": {
+      "type": "string",
+      "default": "dasd"
+    },
+    "telegram": {
+      "type": "string",
+      "default": "https://t.me/joinchat/AAAAAE_SJsbZ6aAjqo_BQQ"
+    }
+  }
+}

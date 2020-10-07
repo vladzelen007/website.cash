@@ -1,0 +1,60 @@
+.carousel {
+  padding: 65px 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+  .control {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: calc(50% - 45px);
+    cursor: pointer;
+    z-index: 100;
+    left: 0;
+    &.right {
+      transform: scale(-1, 1);
+      left: auto;
+      right: 0;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    max-width: 1920px;
+    overflow: hidden;
+    .slick-slide {
+      padding: 0 15px;
+    }
+    .slick-list {
+    }
+    &::after {
+      content: '';
+      display: block;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-image: linear-gradient(to right, #0a0e12, rgba(10, 14, 18, 0) 25%, rgba(10, 14, 18, 0) 75%, #0a0e12)
+    }
+  }
+}
+
+.slick-slider {
+  .slick-slide {
+    width: 280px;
+  }
+  .control {
+    left: 15px;
+    &.right {
+      right: 15px;
+    }
+  }
+}
+
+// .slick-slide {
+//   width: 300px;
+// }

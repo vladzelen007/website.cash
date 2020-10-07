@@ -1,0 +1,118 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import './styles/shared.scss';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  color: #ffffff;
+  height: 100%;
+  background:#0a0e12;;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.18;
+  width: 100%;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  border-radius: 35.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  color: #0a0e12;
+  outline: none;
+  cursor: pointer;
+  padding: 0 30px;
+  transition: all .5s;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.175rem;
+  @include sm {
+    line-height: 70px;
+    border-radius: 35.5px;
+    height: 70px;
+  }
+  &--sm {
+    white-space: normal;
+    font-size: 1.175rem;
+    line-height: 25px;
+    border-radius: 35.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include lg {
+    width: max-content;
+  }
+  &--yellow {
+    background-image: linear-gradient(to bottom, #facd1a, #fa9e1a 75%);
+  }
+  &--enter {
+    @include lg {
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.125rem;
+      background: #ffffff;
+      color: #0a0e12;
+    }
+  }
+  &--white {
+    background: #ffffff;
+    color: #0a0e12;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    transition: all .5s;
+  }
+}

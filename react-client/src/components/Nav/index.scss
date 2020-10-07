@@ -1,0 +1,211 @@
+@import '../../styles/shared.scss';
+
+.wrapper {
+  position: relative;
+}
+
+.header {
+  padding: 0 20px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 50px;
+  left: 0;
+  right: 0;
+
+  &__logo {
+    width: 50%;
+    max-width: 230px;
+    @include lg {
+      width: 30%;
+    }
+  }
+  &__menu-icon {
+    margin-left: auto;
+    cursor: pointer;
+    @include lg {
+      display: none;
+    }
+    svg {
+      fill: #ffffff;
+    }
+  }
+}
+
+.nav {
+  @include lg {
+    width: 70%;
+  }
+  &.show {
+    display: block;
+  }
+  &.hide {
+    display: none;
+    @include lg {
+      display: block;
+    }
+  }
+  &__list {
+    display: flex;  
+    flex-wrap: wrap;
+    position: fixed;
+    width: calc(50% + 150px);
+    padding: 50px 20px 30px 40px;
+    background: #fff;
+    overflow-y: scroll;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    @include lg {
+      position: static;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      width: auto;
+      padding: 0;
+      background: none;
+      overflow: auto;
+      height: auto;
+    }
+  }
+  &__item {
+    flex: 1 0 100%;
+    color: #0a0e12;
+    font-weight: 600;
+    line-height: 60px;
+    @include lg {
+      flex: none;
+      color: #454a50;
+      font-size: 1.125rem;
+    }
+    &:first-child {
+      @include lg {
+        order: -4;
+      }
+    }
+    &:nth-child(2) {
+      @include lg {
+        order: -3;
+      }
+    }
+    &:not(.desktop) {
+      @include lg {
+        display: none;
+      }
+    }
+    a {
+      font-size: 1.1rem;
+      width: 100%;
+      color: inherit;
+      @include lg {
+        display: inline;
+        width: auto;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    &--last {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e8e9ee;
+      @include lg {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 40px;
+    @include lg {
+      display: none;
+    }
+    &-item {
+      padding: 0px 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__control {
+    flex: 1;
+    display: flex;
+    padding-bottom: 35px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e8e9ee;
+    justify-content: space-between;
+    align-items: center;
+    order: -1;
+    & .btn {
+      position: relative;
+      z-index: 100;
+    }
+    @include lg {
+      flex: 0 1 auto;
+      order: 1;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-btn {
+      @include lg {
+      }
+    }
+    &-icon {
+      cursor: pointer;
+      @include lg {
+        display: none;
+      }
+    }
+  }
+  &__logo {
+    padding-top: 40px;
+    @include lg {
+      display: none;
+    }
+    a {
+      display: block;
+      width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__social {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    order: 5;
+    margin-left: 30px;
+    @include lg {
+      padding-top: 0;
+      visibility: visible;
+      margin-left: 0;
+    }
+    a {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+        width: 25px;
+      }
+    }
+    svg {
+      fill: #000;
+      @include lg {
+        fill: #626b75;
+      }
+      &:hover {
+        @include lg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+}

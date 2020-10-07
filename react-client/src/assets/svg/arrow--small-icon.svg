@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 9">
+  <use xlink:href="#small-arr" fill="url(#linear-gradient-shape)">
+    <g id="small-arr">
+      <path d="m1419.99 78.25-4.33 4.492-2.16 2.246-2.16-2.246-4.33-4.492 2.16-2.25 4.33 4.492 4.33-4.492z" transform="translate(-1407 -76)"></path>
+    </g>
+  </use>
+</svg>

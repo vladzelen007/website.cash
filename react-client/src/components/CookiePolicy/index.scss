@@ -1,0 +1,49 @@
+@import '../../styles/shared.scss';
+
+.cookie-policy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  background-image: linear-gradient(to bottom, #facd1a, #fa9e1a 75%);
+  padding: 1rem;
+  width: 100%;
+  &.closed {
+    display: none;
+  }
+  &__container {
+    @include lg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__content {
+    @include lg {
+      max-width: 640px;
+      margin-right: 25px;
+    }
+  }
+  &__title {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+  &__text {
+    line-height: 1.5;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+  }
+  &__btn {
+    font-family: inherit;
+    border: 0;
+    text-transform: uppercase;
+    font-size: .8rem;
+    background: #fff;
+    color: #0a0e12;
+    padding: 0 10px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+}

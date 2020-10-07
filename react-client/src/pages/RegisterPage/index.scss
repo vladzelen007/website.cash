@@ -1,0 +1,19 @@
+@import '../../styles/shared.scss';
+
+.register {
+  padding-top: 200px;
+  width: auto;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  @include md {
+    padding-top: 220px;
+    max-width: 500px;
+  }
+}
+
+.modal__form-name {
+  display: none;
+}

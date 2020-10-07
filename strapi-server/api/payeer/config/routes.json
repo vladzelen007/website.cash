@@ -1,0 +1,24 @@
+{
+  "routes":[
+     {
+        "method":"GET",
+        "path":"/payeer/:payToken",
+        "handler":"payeer.getPaymentUrls",
+        "config":{
+           "policies":[
+              
+           ]
+        }
+     },
+      {
+         "method": "GET",
+         "path": "/payeercallback",
+         "handler": "payeer.parsePaymentCallback",
+         "config": {
+            "policies": [
+
+            ]
+         }
+      }
+  ]
+}
